@@ -1,7 +1,7 @@
 package com.symund.step_definitions;
 
 import com.symund.page.LoginPage;
-import com.symund.page.MainPage;
+import com.symund.page.DashBoardPage;
 import com.symund.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +11,7 @@ import org.junit.Assert;
 public class LogoutFunc_StepDefinitions {
 
     LoginPage login = new LoginPage();
-    MainPage main = new MainPage();
+    DashBoardPage main = new DashBoardPage();
     String expectedTitle ="Symund - QA";
 
 

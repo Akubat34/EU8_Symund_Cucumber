@@ -5,16 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PasswordResetPage {
-    public PasswordResetPage() {
+public class DashBoardPage {
+
+    public DashBoardPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id = "user")
-    public WebElement userInput;
+    @FindBy(id = "expand")
+    public WebElement userBtn;
+
+    @FindBy(xpath = "//li[@data-id='logout']")
+    public WebElement logoutBtn;
 
 
-    @FindBy(id = "reset-password-submit")
-    public WebElement resetPasswordBtn;
+
+
+
 
 }

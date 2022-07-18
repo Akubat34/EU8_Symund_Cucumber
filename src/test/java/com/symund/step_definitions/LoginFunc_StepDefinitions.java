@@ -1,7 +1,7 @@
 package com.symund.step_definitions;
 
 import com.symund.page.LoginPage;
-import com.symund.page.MainPage;
+import com.symund.page.DashBoardPage;
 import com.symund.page.PasswordResetPage;
 import com.symund.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -13,7 +13,7 @@ import org.junit.Assert;
 public class LoginFunc_StepDefinitions {
 
         LoginPage loginPage = new LoginPage();
-        MainPage mainPage = new MainPage();
+        DashBoardPage dashBoardPage = new DashBoardPage();
         PasswordResetPage resetPage = new PasswordResetPage();
 
     String expectedTitle = "Dashboard - Symund - QA";
