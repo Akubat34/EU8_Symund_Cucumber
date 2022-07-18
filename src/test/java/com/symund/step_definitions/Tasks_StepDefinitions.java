@@ -1,18 +1,18 @@
 package com.symund.step_definitions;
 
-import com.symund.page.BasePage;
+
 import com.symund.page.LoginPage;
 import com.symund.page.TasksPage;
-import com.symund.utilities.ConfigurationReader;
-import com.symund.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
+
+import java.util.Locale;
 
 public class Tasks_StepDefinitions  {
 
-        LoginPage loginPage = new LoginPage();
         TasksPage tasksPage = new TasksPage();
 
-
+        @Then("user navigates to the {string} module")
+        public void user_navigates_to_the_module(String moduleName) {
+                tasksPage.navigateTo(moduleName);
+        }
 }

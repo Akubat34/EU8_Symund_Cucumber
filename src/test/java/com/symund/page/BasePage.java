@@ -15,7 +15,7 @@ public abstract class BasePage {
      * @param module
      */
     public void navigateTo(String module){
-        String locator = "//li[@data-id='" + module +"']";
+        String locator = "//li[@data-id='" + module.toLowerCase() +"']";
         Driver.getDriver().findElement(By.xpath(locator)).click();
     }
 
