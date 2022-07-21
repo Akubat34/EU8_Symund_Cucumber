@@ -12,13 +12,13 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
   Scenario Outline: User can create a new contact
     When user navigates to the "Contacts" module
     And user clicks the New Contacts button
-    And user types "<Name>" on the name field
-    And user types "<FirstName>" on the company field
-    And user types "<LastName>" on the title field
+    And user types "<Name>" instead of New Contact text
+    And user types "<CompanyName>" on the company field
+    And user types "<Title>" on the title field
     Then verify that "<Name>" should match on the all contacts
 
     Examples:
-      | Name     | FirstName | LastName    |
+      | Name     | CompanyName | Title    |
       | bro      | Ertan     | Sert        |
       | 123456   | 123456    | 123456      |
       | ½{{$dsjf | !'^+%&/   | '3%567/     |
