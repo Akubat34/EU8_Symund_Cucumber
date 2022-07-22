@@ -8,7 +8,7 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
     And user clicks login button
     Then verify that user can login
 
-  @wip
+
   Scenario Outline: User can create a new contact
     When user navigates to the "Contacts" module
     And user clicks the New Contacts button
