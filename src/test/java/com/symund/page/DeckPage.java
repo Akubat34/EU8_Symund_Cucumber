@@ -21,7 +21,14 @@ public class DeckPage {
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement arrowSignOnLeftOfInput;
 
-    //ul[@class='app-navigation-entry__children']//li//span
+    //TestCase3
+    @FindBy(xpath = "//button[@class='action-item action-item--single icon-add undefined undefined has-tooltip']")
+    public WebElement addButtonForList;
 
+    @FindBy(xpath = "//div[@id='stack-add']//form//input[@placeholder='List name']")
+    public WebElement inputForListName;
+
+    @FindBy(xpath = "//div[@id='stack-add']//form//input[@type='submit']")
+    public WebElement arrowForListName;
 
 }
