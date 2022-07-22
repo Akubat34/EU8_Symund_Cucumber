@@ -17,5 +17,19 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples: File names will be as below:
       | name      | fileName       |
       | Talk      | Talk           |
-      | Commented | Commented.docx |
-      | Favorites | Favorites.docx |
+      #| Commented | Commented.docx |
+      #| Favorites | Favorites.docx |
+
+  @UND-1246
+  Scenario Outline: User can rename any file from its own three dots menu.
+    Given user navigates to Files module
+    And user clicks on the three dots next to the file with "<name>"
+    And user clicks on Rename button
+    And user types a "<differentName>" for the title and taps on Enter button
+    Then the file name is changed to "<expectedName>"
+    Examples: File names will be as below:
+      | name                  | differentName    | expectedName          |
+      | talk                  | talkRenamed      | talkRenamed           |
+      #| talkRenamed           | talk             | talk                  |
+      #| Commented.docx        | CommentedRenamed | CommentedRenamed.docx |
+      #| CommentedRenamed.docx | Commented        | Commented.docx        |

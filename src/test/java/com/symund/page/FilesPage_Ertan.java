@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Files_Ertan {
+public class FilesPage_Ertan {
 
-    public Files_Ertan(){
+    public FilesPage_Ertan(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -17,5 +17,9 @@ public class Files_Ertan {
     @FindBy(xpath = "//a[.='Favorites']")
     public WebElement favoritesButton;
 
+    @FindBy(xpath = "//span[.='Rename']")
+    public WebElement renameButton;
 
+    @FindBy(xpath = "//form//input[@type='text']")
+    public WebElement nameFieldInput;
 }
