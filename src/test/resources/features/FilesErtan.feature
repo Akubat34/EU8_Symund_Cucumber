@@ -17,8 +17,8 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples: File names will be as below:
       | name      | fileName       |
       | Talk      | Talk           |
-      | Commented | Commented.docx |
-      | Favorites | Favorites.docx |
+      #| Commented | Commented.docx |
+      #| Favorites | Favorites.docx |
 
   @UND-1246
   Scenario Outline: User can rename any file from its own three dots menu.
@@ -30,6 +30,6 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples: File names will be as below:
       | name                  | differentName    | expectedName          |
       | talk                  | talkRenamed      | talkRenamed           |
-      | talkRenamed           | talk             | talk                  |
-      | Commented.docx        | CommentedRenamed | CommentedRenamed.docx |
-      | CommentedRenamed.docx | Commented        | Commented.docx        |
+      #| talkRenamed           | talk             | talk                  |
+      #| Commented.docx        | CommentedRenamed | CommentedRenamed.docx |
+      #| CommentedRenamed.docx | Commented        | Commented.docx        |
