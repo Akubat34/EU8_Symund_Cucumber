@@ -43,4 +43,11 @@ public class Deck_StepDefinitons {
 
     }
 
+    //TestCase2
+    @Then("user should see {string}")
+    public void user_should_see(String string) {
+        String actualMessage = deckPage.boardNameInput.getAttribute("validationMessage");
+        Assert.assertEquals(string,actualMessage);
+    }
+
 }

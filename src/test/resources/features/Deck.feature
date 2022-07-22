@@ -8,7 +8,7 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
     And user clicks login button
     Then verify that user can login
 
-  @wip_halil
+
   Scenario Outline: Pos-Verify to create a new board with valid data
     When user navigates to the "Deck" module
     And Click to “Add board” button on the left side bar
@@ -20,8 +20,12 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
       | boardName   |
       | Halil_Board |
 
-#    TC2
-
+  @wip_halil
+  Scenario: Neg-Verify to can’t create a new board with invalid data(space)
+    When user navigates to the "Deck" module
+    And Click to “Add board” button on the left side bar
+    And  Hit enter or click arrow icon
+    Then user should see "Please fill out this field."
 
 
 
