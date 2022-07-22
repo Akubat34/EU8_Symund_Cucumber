@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FilesAddToFavoritesPage {
+public class Files_Ertan {
 
-    public FilesAddToFavoritesPage(){
+    public Files_Ertan(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

@@ -1,7 +1,7 @@
 package com.symund.step_definitions;
 
 import com.symund.page.BasePage;
-import com.symund.page.FilesAddToFavoritesPage;
+import com.symund.page.Files_Ertan;
 import com.symund.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,9 +9,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class FilesAddToFavorites_StepDefinitions extends BasePage {
+public class Files_Ertan_StepDefinitions extends BasePage {
 
-    FilesAddToFavoritesPage filesAddToFavoritesPage = new FilesAddToFavoritesPage();
+    Files_Ertan filesAddToFavoritesPage = new Files_Ertan();
 
     @Given("user navigates to Files module")
     public void user_navigates_to_files_module() {
