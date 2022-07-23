@@ -1,3 +1,4 @@
+@wip_halil
 Feature: As a user, I should be able to create a new contact and edit/delete any contact under Contacts module
 
   Background: Pre_condition User can login with valid credentials
@@ -20,7 +21,7 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
     And  Hit enter or click arrow icon
     Then user should see "Please fill out this field."
 
-  @wip_halil
+
   Scenario: Pos-Verify to create a new list of card or task
     When user navigates to the "Deck" module
     And Click to “Add board” button on the left side bar
