@@ -17,6 +17,8 @@ import org.junit.runner.RunWith;
         glue = "com/symund/step_definitions",
         dryRun = false,
         tags = "@3"
+        dryRun = false
+
 
 )
 public class SymundRunner {
