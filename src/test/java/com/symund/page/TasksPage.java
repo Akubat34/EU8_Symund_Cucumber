@@ -78,6 +78,38 @@ public class TasksPage extends BasePage{
     @FindBy(id = "target")
     public WebElement taskPlaceHolder;
 
+    @FindBy(xpath = "//span[@title='Completed']")
+    public WebElement completedTaskBar;
+
+    public boolean checkTask (String name){
+        String locator ="//div[div='" + name + "']";
+        return Driver.getDriver().findElement(By.xpath(locator)).getText().equalsIgnoreCase(name);
+    }
+
+    public void clickTaskCheckBox(String name){
+        String locator = "//div[*='" + name + "']/../div/label";
+        Driver.getDriver().findElement(By.xpath(locator)).click();
+    }
+
+    /**
+     * To check task can be checked completed
+     * @param name
+     * @return
+     */
+    public boolean checkCompletedTask(String name){
+        boolean result = false;
+        List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//ol[@collection-id='completed']"));
+
+        for (WebElement element : elements) {
+            if (element.getText().equalsIgnoreCase(name)){
+                result = true;
+            }else {
+                result= false;
+            }
+        }
+        return result;
+    }
+
 
 
 
