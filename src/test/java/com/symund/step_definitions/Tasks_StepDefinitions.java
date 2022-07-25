@@ -84,7 +84,7 @@ public class Tasks_StepDefinitions  {
         @Then("verify that user can see the number of all uncompleted tasks next to the Current tab")
         public void verifyThatUserCanSeeTheNumberOfAllUncompletedTasksNextToTheCurrentTab() {
                 BrowserUtils.waitFor(2);
-                System.out.println(tasksPage.checksTheNumberOfCurrentTask());
+                Assert.assertTrue(tasksPage.checksTheNumberOfCurrentTask());
 
         }
 }

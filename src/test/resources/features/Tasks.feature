@@ -49,7 +49,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     And user click important task bar
     Then Verify that user can check "First Task" as an important
 
-  @5_isNotOk
+  @5
   Scenario: User can see the number of all uncompleted tasks next to the Current tab
     And user navigates to the "Tasks" module
     Then verify that user can see the number of all uncompleted tasks next to the Current tab

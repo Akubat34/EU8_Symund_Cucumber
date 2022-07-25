@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TasksPage extends BasePage {
@@ -24,9 +25,6 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//span[@class='icon icon-sprt-bw sprt-task-star']")
     public WebElement star;
 
-    @FindBy(xpath = "//label[@class='reactive no-nav']")
-    public WebElement checkBox;
-
     @FindBy(xpath = "//span[@title='Important']")
     public WebElement importantTaskBar;
 
@@ -36,6 +34,7 @@ public class TasksPage extends BasePage {
     @FindBy(xpath = "//span[@title='Completed']")
     public WebElement completedTaskBar;
 
+
     public boolean checkTask(String name) {
         String locator = "//div[div='" + name + "']";
         return Driver.getDriver().findElement(By.xpath(locator)).getText().equalsIgnoreCase(name);
@@ -43,7 +42,7 @@ public class TasksPage extends BasePage {
 
     /**
      * clicks the checkbox to do it completed
-     * @param name
+     * @param name task name that you want to check
      */
     public void clickTaskCheckBox(String name) {
         String locator = "//div[*='" + name + "']/../div/label";
@@ -53,8 +52,8 @@ public class TasksPage extends BasePage {
     /**
      * To check task can be checked completed
      *
-     * @param name
-     * @return
+     * @param name you write to task
+     * @return is checked or not
      */
     public boolean checkCompletedTask(String name) {
         boolean result = false;
@@ -109,15 +108,6 @@ public class TasksPage extends BasePage {
 
     }
 
-    /**
-     * finds element in task list
-     * @param name
-     * @return
-     */
-    public WebElement findTasksList(String name) {
-        String locator = "//span[@title='" + name + "']";
-        return Driver.getDriver().findElement(By.xpath(locator));
-    }
 
     /**
      * checks the task that you named is it important or not
@@ -135,10 +125,11 @@ public class TasksPage extends BasePage {
         return result;
     }
 
-    public List<String> checksTheNumberOfCurrentTask(){
+    public boolean checksTheNumberOfCurrentTask(){
+
+        boolean result =false;
         String locator ="(//div[@class='app-navigation-entry__counter'])";
         int number = Driver.getDriver().findElements(By.xpath(locator)).size();
-        System.out.println(number);
         List<WebElement> webElements = new ArrayList<>();
         List<String> element =new ArrayList<>();
 
@@ -146,14 +137,24 @@ public class TasksPage extends BasePage {
             locator ="(//div[@class='app-navigation-entry__counter'])" + "[" + i +"]";
             webElements.add(Driver.getDriver().findElement(By.xpath(locator)));
         }
-        System.out.println(webElements.size());
         for (WebElement webElement : webElements) {
             element.add(webElement.getText());
         }
 
+        int totalList =0;
 
+        for (String s : element) {
+            totalList += Integer.parseInt(s);
+        }
 
-        return element;
+        int current =Integer.parseInt(Driver.getDriver().findElement
+                (By.xpath("//*[@id=\"collection_current\"]/div/div[1]")).getText());
+
+        if (current==totalList+3){
+             result =true;
+        }
+
+        return result;
     }
 
 
