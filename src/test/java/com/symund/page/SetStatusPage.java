@@ -20,6 +20,9 @@ public class SetStatusPage extends BasePage{
     @FindBy(xpath = "//form[@class='custom-input__form']")
     public WebElement statusMessageBox;
 
+    @FindBy(xpath = "//button[@class='custom-input__emoji-button']")
+    public WebElement emojiButton;
+
 
 
 
