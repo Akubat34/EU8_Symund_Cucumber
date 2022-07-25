@@ -17,6 +17,9 @@ public class DashBoardPage {
     @FindBy(xpath = "//li[@data-id='logout']")
     public WebElement logoutBtn;
 
+    @FindBy(xpath = "//a[@class='user-status-menu-item__toggle']")
+    public WebElement statusButton;
+
 
 
 
