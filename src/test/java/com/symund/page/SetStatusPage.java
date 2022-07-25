@@ -8,5 +8,8 @@ public class SetStatusPage extends BasePage{
     @FindBy(xpath = "//label[@class='user-status-online-select__label icon-user-status-online']")
     public WebElement onlineButton;
 
+    @FindBy(xpath = "//label[@class='user-status-online-select__label icon-user-status-away']")
+    public WebElement awayButton;
+
 
 }
