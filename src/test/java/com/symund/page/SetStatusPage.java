@@ -11,5 +11,8 @@ public class SetStatusPage extends BasePage{
     @FindBy(xpath = "//label[@class='user-status-online-select__label icon-user-status-away']")
     public WebElement awayButton;
 
+    @FindBy(xpath = "//label[@class='user-status-online-select__label icon-user-status-dnd']")
+    public WebElement doNotDisturbBtn;
+
 
 }
