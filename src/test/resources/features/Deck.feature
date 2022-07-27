@@ -32,7 +32,7 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
     And Hit enter or click arrow icon on the list name input
     Then can see "Halil list" on the list on the current board
 
-  @wip_halil
+
   Scenario: Pos-Verify to create a new card or task on any list
     When user navigates to the "Deck" module
     And Click to “Add board” button on the left side bar
@@ -46,6 +46,23 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
     And Type task name as a "Task1_halil"
     And Hit enter or click arrow icon on the task name input
     Then can see the task as a "Task1_halil"  on the "Halil list" list column
+
+  @wip_halil
+  Scenario: Pos-Verify to create a new card or task on any list
+    When user navigates to the "Deck" module
+    And Click to “Add board” button on the left side bar
+    And  Type board name as a "Halil_Board"
+    And  Hit enter or click arrow icon
+    And click "Halil_Board" on the board side
+    And Click “+” icon at the right top of screen
+    And Type list name as a "Halil list"
+    And Hit enter or click arrow icon on the list name input
+    And Click “+” icon at the right top of list column
+    And Type task name as a "Task1_halil"
+    And Hit enter or click arrow icon on the task name input
+    And Click 3 dots icons at the right bottom of task
+    And Click Assign to me
+    Then Can see your profile name first letter on the right bottom of task
 
 
 

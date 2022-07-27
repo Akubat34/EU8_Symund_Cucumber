@@ -40,4 +40,16 @@ public class DeckPage {
     @FindBy(xpath = "//input[@class='icon-confirm']")
     public WebElement arrowOfTask;
 
+    @FindBy(xpath = "//h3[@class='stack__title has-tooltip']//..//..//div[@class='smooth-dnd-container vertical']//div[@class='card-controls compact-item']//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon']")
+    public WebElement threeDotsOfTheTask;
+
+    @FindBy(xpath = "//div[@class='popover__wrapper']//button[1]")
+    public WebElement assignToMeButton;
+
+    @FindBy(xpath = "//div[@class='popover__wrapper']//button[1]//span[2]")
+    public WebElement assignToMeButtonSpan;
+
+    @FindBy(xpath = "//div[@class='avatars']")
+    public WebElement avatarInTheTaskFrame;
+
 }
