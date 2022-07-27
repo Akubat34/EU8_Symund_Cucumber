@@ -57,4 +57,39 @@ public class Files_Ertan_StepDefinitions extends BasePage {
         Assert.assertEquals(string, existingFile.getAttribute("data-file"));
     }
 
+    @Given("user clicks on Details button")
+    public void user_clicks_on_details_button() {
+        filesPage_Ertan.detailsButton.click();
+    }
+
+    @Given("user clicks on Comments tab button")
+    public void user_clicks_on_comments_tab_button() {
+        filesPage_Ertan.commentsTabButton.click();
+    }
+
+    @Given("user types a comment and presses Enter")
+    public void user_types_a_comment_and_presses_enter() {
+        filesPage_Ertan.commentsField.sendKeys(("Comment should be posted")+Keys.ENTER);
+    }
+
+    @Then("the comment is posted")
+    public void the_comment_is_posted() {
+        Assert.assertTrue(filesPage_Ertan.postedCommentMessage.isDisplayed());
+    }
+
+    @Given("user clicks on posted comment actions button")
+    public void user_clicks_on_posted_comment_actions_button() {
+        filesPage_Ertan.postedCommentActionsButton.click();
+    }
+
+    @Given("user clicks on Delete comment button")
+    public void user_clicks_on_delete_comment_button() {
+        filesPage_Ertan.deleteCommentButton.click();
+    }
+
+    @Then("the comment is deleted")
+    public void the_comment_is_deleted() {
+        Assert.assertTrue(filesPage_Ertan.commentDeletedMessage.isDisplayed());
+    }
+
 }

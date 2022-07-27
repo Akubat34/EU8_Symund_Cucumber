@@ -22,4 +22,26 @@ public class FilesPage_Ertan {
 
     @FindBy(xpath = "//form//input[@type='text']")
     public WebElement nameFieldInput;
+
+    @FindBy(xpath = "//span[.='Details']")
+    public WebElement detailsButton;
+
+    @FindBy(id = "comments")
+    public WebElement commentsTabButton;
+
+    @FindBy(xpath = "//div[@placeholder='Write message, @ to mention someone …']")
+    public WebElement commentsField;
+
+    @FindBy(xpath = "//div[@class='comment__message']")
+    public WebElement postedCommentMessage;
+
+    @FindBy(xpath = "//div[@class='comment comments__list'][1]//button")
+    public WebElement postedCommentActionsButton;
+
+    @FindBy(xpath = "//span[.='Delete comment']")
+    public WebElement deleteCommentButton;
+
+    @FindBy(xpath = "//*[@id=\"body-user\"]/div[1]/span")
+    public WebElement commentDeletedMessage;
+
 }
