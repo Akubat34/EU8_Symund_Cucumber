@@ -31,4 +31,13 @@ public class DeckPage {
     @FindBy(xpath = "//div[@id='stack-add']//form//input[@type='submit']")
     public WebElement arrowForListName;
 
+    @FindBy(xpath = "(//div[@class='stack__header']//button)[2]")
+    public WebElement signPlusOfTask;
+
+    @FindBy(xpath = "//input[@id='new-stack-input-main']")
+    public WebElement nameInputOfTask;
+
+    @FindBy(xpath = "//input[@class='icon-confirm']")
+    public WebElement arrowOfTask;
+
 }

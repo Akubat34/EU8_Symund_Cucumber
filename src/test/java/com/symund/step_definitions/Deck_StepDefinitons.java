@@ -87,5 +87,34 @@ public class Deck_StepDefinitons {
         }
     }
 
+    @When("Click “+” icon at the right top of list column")
+    public void click_icon_at_the_right_top_of_list_column() {
+        deckPage.signPlusOfTask.click();
+    }
+    @When("Type task name as a {string}")
+    public void type_task_name_as_a(String string) {
+        deckPage.nameInputOfTask.sendKeys(string);
+    }
+    @When("Hit enter or click arrow icon on the task name input")
+    public void hit_enter_or_click_arrow_icon_on_the_task_name_input() {
+        deckPage.arrowOfTask.click();
+    }
+
+
+
+    @Then("can see the task as a {string}  on the {string} list column")
+    public void can_see_the_task_as_a_on_the_list_column(String taskName, String listName) {
+        List<WebElement> headerOfTheTask = Driver.getDriver().findElements(By.xpath("//h3[@class='stack__title has-tooltip']//..//..//div[@class='smooth-dnd-container vertical']//div[@class='card-upper']//h3"));
+
+        for (WebElement webElement : headerOfTheTask) {
+            System.out.println(webElement.getText());
+            if(webElement.getText().equals(taskName)){
+                Assert.assertTrue(true);
+            }else {
+                Assert.assertTrue(false);
+            }
+        }
+    }
+
 
 }
