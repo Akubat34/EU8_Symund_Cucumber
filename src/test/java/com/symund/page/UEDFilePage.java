@@ -17,7 +17,7 @@ public class UEDFilePage {
     @FindBy(xpath = "//span[@class='icon icon-add']")
     public WebElement plus;
 
-    @FindBy(xpath = "//span[@class='svg icon icon-upload']")
+    @FindBy(xpath = "//label[@for='file_upload_start']")
     public WebElement uploadBtn;
 
     @FindBy(xpath = "//span[@class='icon icon-folder svg']")

@@ -20,7 +20,7 @@ public class UEDFile_StepDefinitions {
     }
     @When("user clicks Upload file button")
     public void user_clicks_upload_file_button() {
-        uedFilePage.uploadBtn.click();
+        //uedFilePage.uploadBtn.sendKeys("\Users\Ümit\Desktop\Group-1.docx");
     }
     @When("user uploads the file")
     public void fileUpload() {

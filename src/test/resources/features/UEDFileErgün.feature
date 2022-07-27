@@ -7,7 +7,7 @@ Feature: User should be able to upload a file, move or delete any selected file 
     And user clicks login button
     Then verify that user can login
 
-
+  @1231
   Scenario: User can upload a file
     And user navigates to the "Files" module
     And user clicks + sign
@@ -32,7 +32,7 @@ Feature: User should be able to upload a file, move or delete any selected file 
     And user selects and clicks one of them Copy to or Move to
     And user clicks the targeted folder
     Then user verifies that selected folder is there
-  @1231
+
   Scenario: User can delete any selected item from its three dots menu
     And user navigates to the "Files" module
     And user clicks on the selected item's three dots menu
