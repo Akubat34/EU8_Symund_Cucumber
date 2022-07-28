@@ -1,4 +1,3 @@
-@UND-1238
 Feature: As a user, I should be able to see all deleted files and delete/restore them permanently under the Deleted Files tab.
 
 
@@ -8,7 +7,7 @@ Feature: As a user, I should be able to see all deleted files and delete/restore
     And user leaves "Employee123" in password
     And user clicks login button
     Then verify that user can login
-@UND-1260
+@UND-1260 @smoke
   Scenario: User can see the most recent deleted file in the first line of the deleted file list
   when deleted files are ordered by newest to oldest
     When user navigates to the "Files" module
