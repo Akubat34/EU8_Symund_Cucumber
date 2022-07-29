@@ -7,7 +7,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     And user clicks login button
     Then verify that user can login
 
-@UND-1251
+@UND-1251 @smoke
   Scenario Outline: User can create a new list of tasks
     And user navigates to the "Tasks" module
     And user clicks "AddList..." button and types "<lists>" name
@@ -18,7 +18,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
       | lists   |
       | To Do   |
 
-@UND-1252 @smoke
+@UND-1252
   Scenario Outline:User can create a new task
     And user navigates to the "Tasks" module
     And user clicks "AddList..." button and types "To Do" name
