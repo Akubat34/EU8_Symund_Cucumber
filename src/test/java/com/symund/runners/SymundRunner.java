@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/symund/step_definitions",
         dryRun = false,
-        tags = "@UND-1238"
+        tags = "@UND-1244 or @UND-1246 or @UND-1247 or @UND-1250"
 
 )
 public class SymundRunner {
