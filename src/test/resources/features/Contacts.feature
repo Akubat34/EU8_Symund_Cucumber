@@ -23,3 +23,33 @@ Feature: As a user, I should be able to create a new contact and edit/delete any
       | 123456   | 123456    | 123456      |
       | ½{{$dsjf | !'^+%&/   | '3%567/     |
       | .,k123   | ç.ksle098 | 159,.=ueybs |
+
+    Scenario: User can see all the contacts as a list inside the middle column and total number of the contacts near the “All Contacts” tab
+      When user navigates to the "Contacts" module
+      Then verify that list of the contact number should equal number of the contacts near the All Contacts tab
+
+
+    Scenario: User can change the profile picture of any contact with a previously uploaded picture by using “Choose from files” option
+      When user navigates to the "Contacts" module
+      When user clicks the New Contacts button
+      And user types "Ertan" on the name field
+      And user types "CYDEO" on the company field
+      And user types "Company" on the title field
+      And user clicks picture button
+      And user clicks Choose from files button
+      And user selects 5.jpg file
+      And user clicks choose button
+      And user repeats last 4 steps with another picture
+      Then verify that the URL of the both of the pictures are different
+  
+      Scenario: User can delete any selected contact
+        When user navigates to the "Contacts" module
+        When user clicks the New Contacts button
+        And user types "Ertan" on the name field
+        And user types "CYDEO" on the company field
+        And user types "Company" on the title field
+        And user clicks three dot button
+        And user clicks Delete button
+        Then verify that the contact should be removed
+
+
