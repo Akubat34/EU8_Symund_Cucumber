@@ -11,11 +11,9 @@ Feature: User should be able to upload a file, move or delete any selected file 
   Scenario: User can upload a file
     And user navigates to the "Files" module
     And user clicks + sign
-    And user clicks Upload file button
-    And user uploads the file
+    And user clicks Upload file button and uploads the file
     Then user verify that file is uploaded
 
-    #
   Scenario: User can create a new folder
     And user navigates to the "Files" module
     And user clicks + sign
@@ -24,7 +22,6 @@ Feature: User should be able to upload a file, move or delete any selected file 
     And user hits the arrow
     Then user verify that New folder is in folders area
 
-    #
   Scenario: User can move or copy any selected item to any folder
     And user navigates to the "Files" module
     And user right-clicks on the selected folder and clicks the Move or copy button from folders area
@@ -40,8 +37,6 @@ Feature: User should be able to upload a file, move or delete any selected file 
     And user clicks the Deleted files button
     Then user verifies that deleted folder is there
 
-
-    #
   Scenario: User can see the total number of files and folders under the files list table
     And user navigates to the "Files" module
     Then user can see the total number of files and folders under the files list table
