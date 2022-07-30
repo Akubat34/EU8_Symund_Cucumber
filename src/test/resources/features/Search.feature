@@ -27,7 +27,7 @@ Feature: As a user, I should be able to search file or contact from the Dashboar
   Scenario Outline: User can search contacts by clicking on the contacts icon and typing its name
     And user click to the contacts icon
     And user type "<contactName>" name
-    Then verify that user can see the "lists" name
+    Then verify that user can see the "<contactName>" name
 
     Examples:
       | contactName |
@@ -41,9 +41,11 @@ Feature: As a user, I should be able to search file or contact from the Dashboar
     Then verify that user can see the image
 
   @oz4
-  Scenario: User can navigate to the Dashboard page whenever clicking
+  Scenario Outline: User can navigate to the Dashboard page whenever clicking
   the Symund icon at the top left corner on the page
-    And user navigates to the "Photos" module
+    And user navigates to the "<desiredModule>" module
     And user clicks on Symund icon
-    Then verify that user land on Dashboard page
-
+    Then verify that user can see "<expectedTitle>" title
+Examples:
+  | desiredModule | expectedTitle           |
+  | Photos        | Dashboard - Symund - QA |

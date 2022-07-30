@@ -40,7 +40,7 @@ public class Search_StepDefinitions {
 
     }
 
-    @Then("user type {string} name")
+    @And("user type {string} name")
     public void user_type_name(String string) throws InterruptedException {
         Thread.sleep(8000);
 
@@ -58,32 +58,32 @@ public class Search_StepDefinitions {
 
 
    @Then("verify that user can see the {string} name")
-    public void verify_that_user_can_see_the_name(String string) throws InterruptedException {
+    public void verify_that_user_can_see_the_name(String contactName) throws InterruptedException {
 
         Thread.sleep(8000);
-       // Assert.assertEquals(string,actualContact);
+        Assert.assertEquals(contactName,searchPage.actualContactName.getText());
 
     }
 
-    @Then("user clicks on image")
+    @And("user clicks on image")
     public void user_clicks_on_image() {
         searchPage.image.click();
 
     }
     @Then("verify that user can see the image")
     public void verify_that_user_can_see_the_image() {
-       //Assert.assertEquals(expectedTitle2,Driver.getDriver().getTitle());
+       Assert.assertTrue(searchPage.image.isDisplayed());
     }
 
-    @Then("user clicks on Symund icon")
+    @And("user clicks on Symund icon")
     public void user_clicks_on_symund_icon() {
         searchPage.Symund_icon.click();
     }
-    @Then("verify that user land on Dashboard page")
-    public void verify_that_user_land_on_dashboard_page() {
-    // Assert.assertEquals(expectedTitle3,Driver.getDriver().getTitle());
+    @Then("verify that user can see {string} title")
+    public void verify_that_user_can_see_title(String expectedTitle) {
+    Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
     }
-    @Then("user click on outputFile")
+    @And("user click on outputFile")
     public void user_click_on_outputFile() {
 
         searchPage.outPutFile.click();

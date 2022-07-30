@@ -28,10 +28,10 @@ public class SearchPage {
     @FindBy(xpath = "//strong[.='Notes']")
     public WebElement Notes;
 
-    @FindBy(xpath = "//*[.='Sprint4.jpg']")
+    @FindBy(xpath = "//img[@aria-describedby='image-36018']")
     public WebElement image;
 
-    @FindBy(css = ".hidden-visually")
+    @FindBy(css = ".logo.logo-icon")
     public WebElement Symund_icon;
 
     @FindBy(xpath = "//h3/span")
@@ -39,6 +39,9 @@ public class SearchPage {
 
     @FindBy(css = "h2.app-sidebar-header__maintitle")
     public WebElement searchedFilesDetailsTitle;
+
+    @FindBy(css=".full-name")
+    public WebElement actualContactName;
 
 
 }
