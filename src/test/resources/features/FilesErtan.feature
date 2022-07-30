@@ -1,4 +1,4 @@
-Feature: As a user, I should be able to create a new task list or a single task and add any task to completed and important tasks list.
+Feature: As a user, I should be able to add a file to favorites, rename any file and give some comments on any file.
 
   Background: Pre_condition User can login with valid credentials
     Given user navigates to the symund login page
@@ -45,7 +45,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples: File names will be as below:
       | name      |
       | talk      |
-      | Commented |
+      #| Commented |
 
   @UND-1250
   Scenario Outline: User can delete the comments made on any file from the the file details menu opened right side
@@ -59,4 +59,4 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples: File names will be as below:
       | name      |
       | talk      |
-      | Commented |
+      #| Commented |

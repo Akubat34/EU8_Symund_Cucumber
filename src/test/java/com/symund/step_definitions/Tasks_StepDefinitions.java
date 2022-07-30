@@ -3,12 +3,9 @@ package com.symund.step_definitions;
 
 import com.symund.page.TasksPage;
 import com.symund.utilities.BrowserUtils;
-import com.symund.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 
 public class Tasks_StepDefinitions  {
@@ -22,7 +19,7 @@ public class Tasks_StepDefinitions  {
 
         @And("user clicks \"AddList...\" button and types {string} name")
         public void userClicksButtonAndTypesName( String name) {
-                if (tasksPage.checkTasksName(name)){
+                if (tasksPage.checkTasksList(name)){
                         tasksPage.deleteList(name);
                 }
                 tasksPage.addListButton.click();
@@ -42,8 +39,7 @@ public class Tasks_StepDefinitions  {
         @Then("verify that user can create {string} with given name")
         public void verify_that_user_can_create_with_given_name(String name) {
                 BrowserUtils.waitFor(5);
-                Assert.assertTrue(tasksPage.checkTasksName(name));
-                tasksPage.deleteList(name);
+                Assert.assertTrue(tasksPage.checkTasksList(name));
         }
 
         @Then("Click the checkbox left side of the task name that {string}")
@@ -53,27 +49,19 @@ public class Tasks_StepDefinitions  {
 
         @Then("Verify that user can add {string} into completed tasks")
         public void verify_that_user_can_add_task_into_completed_tasks(String name) {
-                tasksPage.clickTaskCheckBox(name);
+                tasksPage.checkCompletedTask(name);
          }
 
 
         @And("Click the checkbox right side of the task bar")
         public void clickTheCheckboxRightSideOfTheTaskBar() {
-                tasksPage.checkBox.click();
+                tasksPage.star.click();
         }
 
-        @Then("Verify that user can checked as important")
-        public void verifyThatUserCanCheckedAsImportant() {
-        }
-
-        @Then("verify that user can see number of all uncompleted tasks")
-        public void verifyThatUserCanSeeNumberOfAllUncompletedTasks() {
-        }
-
+       
 
         @Then("verify that user could create {string} with given name")
         public void verifyThatUserCouldCreateWithGivenName(String name) {
-                System.out.println(Driver.getDriver().findElement(By.xpath("//div[div='" + name + "']")).getText());
                 Assert.assertTrue(tasksPage.checkTask(name));
                 tasksPage.deleteList("To Do");
         }
@@ -81,5 +69,22 @@ public class Tasks_StepDefinitions  {
         @And("user click completed task bar")
         public void userClickCompletedTaskBar() {
                 tasksPage.completedTaskBar.click();
+        }
+
+        @And("user click important task bar")
+        public void userClickImportantTaskBar() {
+                tasksPage.importantTaskBar.click();
+        }
+
+        @Then("Verify that user can check {string} as an important")
+        public void verifyThatUserCanCheckAsAnImportant(String name) {
+                Assert.assertTrue(tasksPage.checkTaskIsImportant(name));
+        }
+
+        @Then("verify that user can see the number of all uncompleted tasks next to the Current tab")
+        public void verifyThatUserCanSeeTheNumberOfAllUncompletedTasksNextToTheCurrentTab() {
+                BrowserUtils.waitFor(2);
+                Assert.assertTrue(tasksPage.checksTheNumberOfCurrentTask());
+
         }
 }
