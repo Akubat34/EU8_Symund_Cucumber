@@ -34,7 +34,7 @@ Feature: As a user, I should be able to add a file to favorites, rename any file
       #| Commented.docx        | CommentedRenamed | CommentedRenamed.docx |
       #| CommentedRenamed.docx | Commented        | Commented.docx        |
 
-  @UND-1247
+  @UND-1247 @Smoke
   Scenario Outline: User can put some comments on any file from the file details menu opened right side
     Given user navigates to Files module
     And user clicks on the three dots next to the file with "<name>"
