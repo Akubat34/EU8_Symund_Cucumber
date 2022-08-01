@@ -23,7 +23,7 @@ public class Contacts_StepDefinitions extends BasePage {
     public void user_clicks_the_new_contacts_button() {
         contactsPage.newContact.click();
     }
-    @And("user types {string} on the name field")
+    @And("user types {string} instead of New Contact text")
     public void userTypesOnTheNameField(String name) {
         contactsPage.fullName.clear();
         contactsPage.fullName.sendKeys(name);
