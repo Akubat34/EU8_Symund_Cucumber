@@ -20,6 +20,14 @@ public class DashBoardPage {
     @FindBy(xpath = "//button[@class='user-status-menu-item__toggle user-status-menu-item__toggle--inline']")
     public WebElement statusButton;
 
+    @FindBy(xpath = "//*[@id=\"status-status\"]/li/div/button/text()")
+    public WebElement statusText;
+
+    @FindBy (xpath = "//*[@id=\"status-status\"]/li/div/button/span")
+    public WebElement statusIcon;
+
+
+
 
 
 
