@@ -28,7 +28,7 @@
                     <perCoreThreadCount>false</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/CukesRunner*.java</include>
+                        <include>**/SymundRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
