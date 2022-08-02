@@ -27,4 +27,32 @@ public class ContactsPage {
 
     @FindBy(xpath = "//div[@class='app-content-list-item-line-one']")
     public List<WebElement> middleColumn;
+
+    @FindBy(xpath = "(//div[@class='app-navigation-entry__counter'])[1]")
+    public WebElement numberOfContacts;
+
+    @FindBy (xpath = "//button[@class='icon action-item__menutoggle icon-picture-force-white']")
+    public WebElement pictureButton;
+
+    @FindBy ( xpath = "//span[.='Choose from Files']")
+    public WebElement chooseFiles ;
+
+    @FindBy ( xpath =  "//span[.='5.jpg']")
+    public WebElement firstJPG;
+
+    @FindBy ( xpath =  "//span[.='25.jpg']")
+    public WebElement secondJPG;
+
+    @FindBy (xpath = "//button[.='Choose']")
+    public WebElement chooseButton;
+
+    @FindBy (xpath = "//div[@class='contact-header-avatar__photo']")
+    public WebElement avatarURL;
+
+    @FindBy (xpath = "(//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon'])[5]")
+    public WebElement threeDotButton;
+    
+    @FindBy (xpath = "(//span[.='Delete'])[5]")
+    public WebElement deleteButton;
+    
 }
