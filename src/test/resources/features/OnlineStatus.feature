@@ -7,10 +7,11 @@ Feature: As a user, I should be able to change my online status and set a status
     And User clicks login button
 
 
+  @UND-1302 @wip
   Scenario: User can view Online Status
     Then user can view Online Status on Dashboard
 
-
+  @UND-1303 @wip
   Scenario Outline: User can change Online Status
     When user clicks status button on the dashboard
     And user selects online "<status>"
@@ -23,7 +24,7 @@ Feature: As a user, I should be able to change my online status and set a status
       | doNotDisturb | dnd       |
       | invisible    | invisible |
 
-  @wip
+  @UND-1304 @wip
   Scenario Outline: User can set a status message from default options
     When user clicks status button on the dashboard
     And user selects "<options>"
@@ -37,7 +38,7 @@ Feature: As a user, I should be able to change my online status and set a status
       | outSick             | 🤒 Out sick         |
       | setStatusMessageBtn | 🌴 Vacationing      |
 
-
+  @UND-1305 @wip
   Scenario Outline: User can set a custom status message with also using any emoji option provided
     When user clicks status button on the dashboard
     And user clicks status message box
