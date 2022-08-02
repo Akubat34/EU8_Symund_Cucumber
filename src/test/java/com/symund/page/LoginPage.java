@@ -32,6 +32,15 @@ public class LoginPage {
     public WebElement message;
 
 
+    @FindBy(className = "avatardiv")
+    public WebElement avatardiv;
+
+
+    @FindBy(xpath = "//div[@class='avatardiv avatardiv-shown']")
+    public WebElement avatar;
+
+
+
 
 
 }
