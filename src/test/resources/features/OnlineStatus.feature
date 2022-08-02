@@ -31,12 +31,12 @@ Feature: As a user, I should be able to change my online status and set a status
     And user clicks set status message button
     Then user can see "<expectedText>" on the status text
     Examples:
-      | options             | expectedText        |
-      | inMeeting           | 📅 In a meeting     |
-      | commuting           | 🚌 Commuting        |
-      | workingRemotely     | 🏡 Working remotely |
-      | outSick             | 🤒 Out sick         |
-      | setStatusMessageBtn | 🌴 Vacationing      |
+      | options         | expectedText        |
+      | inMeeting       | 📅 In a meeting     |
+      | commuting       | 🚌 Commuting        |
+      | workingRemotely | 🏡 Working remotely |
+      | outSick         | 🤒 Out sick         |
+      | vacationing     | 🌴 Vacationing      |
 
   @UND-1305 @wip
   Scenario Outline: User can set a custom status message with also using any emoji option provided
