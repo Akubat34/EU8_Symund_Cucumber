@@ -21,6 +21,12 @@ public class DashBoardPage {
     public WebElement statusButton;
 
 
+    @FindBy (xpath = "//*[@id=\"status-status\"]/li/div/button/span")
+    public WebElement statusIcon;
+
+
+
+
 
 
 

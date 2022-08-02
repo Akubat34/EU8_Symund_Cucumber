@@ -7,6 +7,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     And user clicks login button
     Then verify that user can login
 
+
 @UND-1251 @smoke
   Scenario Outline: User can create a new list of tasks
     And user navigates to the "Tasks" module
@@ -17,6 +18,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples:
       | lists   |
       | To Do   |
+
 
 @UND-1252
   Scenario Outline:User can create a new task
@@ -29,6 +31,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     Examples:
       | tasks        |
       | First Task   |
+
 
   @UND-1253
   Scenario: User can add any task to the list of completed tasks by clicking on the checkbox near the task name
@@ -48,6 +51,7 @@ Feature: As a user, I should be able to create a new task list or a single task 
     And Click the checkbox right side of the task bar
     And user click important task bar
     Then Verify that user can check "First Task" as an important
+
 
   @UND-1255
   Scenario: User can see the number of all uncompleted tasks next to the Current tab
